@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        
+        <div class="success-message" id="successMessage">
+            Registration successful! Welcome to our platform.
+        </div>
+
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="fullName" class="required">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Dhr kr.">
+                <div class="error-message" id="nameError">Please enter your full name (min 3 characters)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="dhr@example.com">
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91-1234567890">
+                    <div class="error-message" id="phoneError">Please enter a valid phone number (10 digits)</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                    <div class="error-message" id="birthdateError">You must be at least 18 years old</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="required">Password</label>
+                <input type="password" id="password" name="password" placeholder="">
+                <div class="password-strength">
+                    <div class="strength-meter" id="passwordStrength"></div>
+                </div>
+                <div class="error-message" id="passwordError">
+                    Password must be at least 8 characters and contain at least one number and one special character
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="required">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="">
+                <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terms" name="terms">
+                    I agree to the terms and conditions
+                </label>
+                <div class="error-message" id="termsError">You must agree to the terms</div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        
+    <script src="formscript.js"></script>
+</body>
+</html>
